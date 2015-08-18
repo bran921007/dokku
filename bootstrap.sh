@@ -49,7 +49,7 @@ dokku_install_package() {
   echo "deb https://packagecloud.io/dokku/dokku/ubuntu/ trusty main" > /etc/apt/sources.list.d/dokku.list
 
   apt-get update > /dev/null
-  apt-get install -qq -y "linux-image-extra-$(uname -r)" apt-transport-https
+  # apt-get install -qq -y "linux-image-extra-$(uname -r)" apt-transport-https
 
   if [[ -n $DOKKU_CHECKOUT ]]; then
     apt-get install -qq -y dokku=$DOKKU_CHECKOUT
